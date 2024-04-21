@@ -1,0 +1,14 @@
+## Turn on rewrite engine
+RewriteEngine on
+
+## Force WWW
+RewriteCond %{HTTP_HOST} ^example\.com [NC]
+RewriteRule ^(.*)$ http://www.example.com/$1 [L,R=301,NC]
+
+## Force HTTPS
+RewriteCond %{HTTPS} !on
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+## Remove trailing slash
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ http://www.example.com/$1 [L,R=301]
