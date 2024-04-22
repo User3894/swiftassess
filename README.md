@@ -7,3 +7,8 @@ https://swiftassess.free.nf
 
 
 The project addresses the following:
+1- CRUD operations.
+2- Creating and managing sessions.
+3- Managing questions and answers.
+4- User management.
+5- Managing testing operations.
